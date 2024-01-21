@@ -41,7 +41,7 @@ const Category = () => {
       Cell: ({ row }) => (
         <div className="flex justify-center space-x-2 ml-[-60px]">
           <button className="text-indigo-600 hover:text-indigo-900 mr-2" onClick={() => navigate(`/category/${row.original.id}`)}>Edit</button>
-          <button className="text-red-600 hover:text-red-900" onClick={() => deleteCategory(row.id)}>Delete</button>
+          <button className="text-red-600 hover:text-red-900" onClick={() => deleteCategory(row.original.id)}>Delete</button>
         </div>
       ),
     },
@@ -49,8 +49,9 @@ const Category = () => {
 
   const deleteCategory = async (id) => {
     try {
+      console.log(id);
       const response = await apiDELETE(`/v1/category/delete-category/${id}`);
-
+console.log(response);
       if (response?.data?.status) {
         toast.success('Deleted!')
         getAllCategories();
