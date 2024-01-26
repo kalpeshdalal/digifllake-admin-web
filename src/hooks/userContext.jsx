@@ -7,7 +7,7 @@ export const UserProvider = ({children}) =>{
     const [userData, setUserData] = useState(null);
 
     const setUser = ({body}) => {
-        setUserData({name:"praful"})
+        setUserData({name:"kalpesh"})
     }
     const updateUser = ({body}) => {
         
