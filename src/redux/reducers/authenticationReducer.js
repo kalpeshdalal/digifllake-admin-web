@@ -11,11 +11,7 @@ export const authenticationReducer = createSlice({
   initialState,
   reducers: {
     setUser: (state, action) => {
-      state.userData = action.payload.user;
-     
-    },
-    setSignUpModal: (state, action) => {
-      state.isSignUpModalVisible = action.payload;
+      state.userData = action.payload.user;  
     },
     logout: (state) => {
       state.userData = null;
