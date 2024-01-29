@@ -21,7 +21,7 @@ const AddNewCategory = () => {
   const save = async () => {
     if (validate()) {
       let payload = {
-        active: Boolean(status),
+        active: status,
         name: categoryName,
         description: description
       }
